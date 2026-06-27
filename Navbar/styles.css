@@ -1,0 +1,160 @@
+/* =============== */
+/* Global Styles */
+/* =============== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* =============== */
+/* Open Button */
+/* =============== */
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #49a6e9;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-toggle:hover {
+  color: #102a42;
+  transform: scale(1.1);
+}
+
+/* =============== */
+/* Sidebar */
+/* =============== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 320px;
+  height: 100vh;
+
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+}
+
+/* Sidebar Show */
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
+/* =============== */
+/* Header */
+/* =============== */
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: crimson;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  transform: rotate(180deg);
+}
+
+/* =============== */
+/* Links */
+/* =============== */
+
+.links {
+  margin-top: 1rem;
+}
+
+.links a {
+  display: block;
+
+  padding: 1rem 1.5rem;
+
+  color: #617d98;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: #d6ebff;
+  color: #49a6e9;
+  padding-left: 2rem;
+}
+
+/* =============== */
+/* Social Icons */
+/* =============== */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1.5rem;
+}
+
+.social-icons a {
+  color: #49a6e9;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #102a42;
+}
+
+/* =============== */
+/* Responsive */
+/* =============== */
+
+@media screen and (max-width: 676px) {
+  .sidebar {
+    width: 100%;
+  }
+}
